@@ -177,7 +177,7 @@ struct DashboardView: View {
                         
                         Spacer()
                         
-                        if let githubURL = URL(string: "https://github.com/lcdnet/WellnessApp/blob/main/WellnessApp/docs/904359059%20-%20Wellness%20Application%20Abandonment%20Mitigation%20Research%20Paper.pdf") {
+                        if let githubURL = URL(string: "https://github.com/lcdnet/WellnessApp/blob/main/WellnessApp/docs/904359059-Wellness_Application_Abandonment_Mitigation_Research_Paper.pdf") {
                             Link(destination: githubURL) {
                                 HStack {
                                     Spacer()
