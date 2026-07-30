@@ -177,7 +177,7 @@ struct DashboardView: View {
                         
                         Spacer()
                         
-                        if let githubURL = URL(string: "https://github.com/YOUR_GITHUB_USERNAME/MetabolicEngine-iOS") {
+                        if let githubURL = URL(string: "https://github.com/lcdnet/WellnessApp") {
                             Link(destination: githubURL) {
                                 HStack {
                                     Spacer()
