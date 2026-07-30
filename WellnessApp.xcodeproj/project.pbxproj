@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		DBF96687301B497A0057F698 /* WellnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF966BB301BF5DF0057F698 /* WellnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WellnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,8 @@
 			isa = PBXGroup;
 			children = (
 				DBF96689301B497A0057F698 /* WellnessApp */,
-				DBF96688301B497A0057F698 /* Products */,
+				DBF966BB301BF5DF0057F698 /* WellnessApp.app */,
 			);
-			sourceTree = "<group>";
-		};
-		DBF96688301B497A0057F698 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DBF96687301B497A0057F698 /* WellnessApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = WellnessApp;
-			productReference = DBF96687301B497A0057F698 /* WellnessApp.app */;
+			productReference = DBF966BB301BF5DF0057F698 /* WellnessApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +87,7 @@
 			mainGroup = DBF9667E301B49790057F698;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DBF96688301B497A0057F698 /* Products */;
+			productRefGroup = DBF9667E301B49790057F698;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

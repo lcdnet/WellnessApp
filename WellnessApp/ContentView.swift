@@ -6,19 +6,45 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @StateObject private var metabolicEngine = MetabolicEngine()
+    
+    // Check if user has completed profile setup before; default to Profile tab (2) if false
+    @AppStorage("hasCompletedProfileSetup") private var hasCompletedProfileSetup: Bool = false
+    @State private var selectedTab: Int
+    
+    init() {
+        // Reads initial state directly to set default tab
+        let isSetup = UserDefaults.standard.bool(forKey: "hasCompletedProfileSetup")
+        _selectedTab = State(initialValue: isSetup ? 0 : 2)
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            DashboardView(metabolicEngine: metabolicEngine)
+                .tabItem {
+                    Label("Today", systemImage: "sparkles")
+                }
+                .tag(0)
+            
+            TelemetryLogView()
+                .tabItem {
+                    Label("History", systemImage: "list.bullet.rectangle")
+                }
+                .tag(1)
+            
+            ProfileSetupView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.crop.circle")
+                }
+                .tag(2)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: [UserProfile.self, LoggedMeal.self, LoggedWorkout.self], inMemory: true)
 }
